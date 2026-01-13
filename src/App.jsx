@@ -169,8 +169,8 @@ const App = () => {
   ], []);
 
   useEffect(() => {
-    const musicTimer = setInterval(() => setSongIdx((p) => (p === songs.length - 1 ? 0 : p + 1)), 3000);
-    const bookTimer = setInterval(() => setBookIdx((p) => (p === books.length - 1 ? 0 : p + 1)), 3000);
+    const musicTimer = setInterval(() => setSongIdx((p) => (p === songs.length - 1 ? 0 : p + 1)), 5000);
+    const bookTimer = setInterval(() => setBookIdx((p) => (p === books.length - 1 ? 0 : p + 1)), 5000);
     return () => { clearInterval(musicTimer); clearInterval(bookTimer); };
   }, [songs.length, books.length]);
 
@@ -238,7 +238,7 @@ const App = () => {
 
   const getCakeMessage = useCallback(() => {
     switch (cakeStage) {
-      case 0: return "Make a wish and blow out the candles.";
+      case 0: return "Make a wish and blow out the candles. \n (tap the cake emoji)";
       case 1: return "Wait, the flames are stubborn! Try again! 🌬️";
       case 2: return "Nearly there... give it all you've got! 😤";
       case 3: return "A wish made in sweetness. Happy Birthday. ✨";
@@ -474,9 +474,9 @@ const App = () => {
             <p className="text-[12px] md:text-[15px] text-slate-700 leading-relaxed font-normal italic">
               Sanjanaa, I hardly ever find it difficult to put a word or two together, yet at this crucial juncture, all my divine powers of yap seem to have flown out the window.
               <br /><br />
-              Anyway - last but certainly not least (and as much as I know you hate the word) - I am so incredibly thankful for your presence in my life. Never once in these jagged few years did I imagine I'd run into such a perfect concoction of joy, infectious energy, laughter, and warmth.
+              Anyway - last but certainly not least (and as much as I know you hate the word) - I am so incredibly thankful for your presence in my life. Never once in these jagged few years did I imagine I'd run into such <span className="font-bold text-slate-900">a perfect concoction of joy, infectious energy, laughter, and warmth.</span>
               <br /><br />
-              I am so proud of the growth I've seen in you over the past few years, and I'm even more excited to see where life takes you next. I know it will be something spectacular, because an amazing person like you deserves nothing less. I'm forever grateful to the universe to call you my NYT partner-in-crime, my go-to for guidance, my personal "sit-down" comedian, and most importantly, my dearest friend.
+              I am so proud of the growth I've seen in you over the past few years, and I'm even more excited to see where life takes you next. I know it will be something spectacular, because an amazing person like you deserves nothing less. I'm forever grateful to the universe to call you my NYT partner-in-crime, my go-to for guidance, my personal "sit-down" comedian, and most importantly, <span className="font-bold text-slate-900">my dearest friend.</span>
               <br /><br />A very <span className="font-bold text-slate-900">happy birthday</span> to you, Sanju. Thank you for everything you do for us, and I hope to see you soon.
             </p>
           </div>
