@@ -42,6 +42,9 @@ const SITE_CONFIG = {
   },
 };
 
+/**
+ * CHARACTER SPRITES CONFIGURATION
+ */
 const CHARACTER_LIST = [
   { name: "Totoro", url: "https://p7.hiclipart.com/preview/830/301/211/my-neighbor-totoro-catbus-mei-kusakabe-satsuki-kusakabe-studio-ghibli-totoro.jpg", tilt: "rotate-[15deg]" }, 
   { name: "Sanrio", url: "https://w7.pngwing.com/pngs/745/419/png-transparent-sanrio-my-melody-kuromi-hello-kitty-character-sanrio-love-child-flower.png", tilt: "rotate-[-12deg]" }, 
@@ -53,6 +56,9 @@ const CHARACTER_LIST = [
   { name: "Moomin", url: "https://w7.pngwing.com/pngs/454/980/png-transparent-moomintroll-the-moomins-moomin-valley-snork-maiden-character-others-white-mammal-hand.png", tilt: "rotate-[-12deg]" } 
 ];
 
+/**
+ * UI SUB-COMPONENTS
+ */
 const SectionSprite = ({ Icon, colorClass, delay = "0s", side }) => {
   const isLeft = side === "left";
   return (
@@ -142,14 +148,16 @@ const App = () => {
     { text: "Happy birthday Sanjanaa!! Stay cuchuswee😉 and have a wonderful day <3 I hope this trip around the sun is your best yet! I can't wait to make more memories together 💗", author: "- Pahal" },
     { text: "Happy birthday Sanjjj!!!🥳\nI appreciate chu more than you could know\nHope you have a great year ahead of you✨\nHopefully we get to meet again really soon\n\n- Mr. Owl🦉", author: "- Zanil" },
     { text: "What day is it? 😁💃💃\nIt’s the day my favorite roommie turns 23💃💓💓\nHappy birthday Sanjanaa 🌸\nMoving to Amersfoort has been so much nicer because of you. I’m really grateful to know you. It’s always inspiring to see how much you do and how many interests and talents you carry so naturally.\nI hope this year brings you new joys, meaningful moments, and little discoveries that make you happy. I’m excited to see where life takes you, and I know it’ll be something wonderful.\nThank you for being you, and for always being there.\nHappy birthday once again ✨🫶🏼", author: "- Selena" },
+    { text: "Happiest birthday, Sanjanaa! 🎉💖\nYou are genuinely one of the sweetest people I’ve ever met, and getting to know you has been such a wonderful experience. You’re sooo fun to be around, and always have a way of cheering people up.🥰✨\nI absolutely love the random questions you ask out of nowhere; they make conversations so much fun and interesting. I feel like I relate to your personality in so many ways, and that makes our bond even more special to me.💫🤍\nThank you for always being you, for the laughs, the warmth, and the good vibes you bring.💕\nI hope this year brings you happiness, success, and everything your heart wishes for. You truly deserve it.✨", author: "Sakshi S." },
+    { text: "Happy Birthday, Sanjana! Wishing you all the very best in your future endeavors. May you keep dancing your way across different parts of the world. I’ll always cherish our daily bus convos during school days - it feels like it happened just yesterday, yet it’s already been 10 years.\n\nLet’s stay in touch and keep sharing life updates for the next 10 years too. You and Sakshi will always be the two juniors who made school life more fun and memorable. I truly miss those carefree days filled with silly conversations, so different from the serious ones we have now( not completely true tho).\n\nOnce again, wishing you the best of everything, and may you achieve success in all that you do.", author: "Asita" },
     { videoUrl: "https://drive.google.com/file/d/1NcxDw7Ul3kIEETzMIXUaLGJ3IALFYZsI/preview", author: "- Saai" },
-    { text: "And now, for one final message..." },
+    { text: "And now, for the final wish of the day..." },
     { videoUrl: "https://drive.google.com/file/d/1AktBmYP_GydPGNpEYLdl0Fk6QmT0T1CG/preview", imageUrl: "assets/18.jpg", author: "- Amma and Naina" },
   ], []);
 
   const books = useMemo(() => [
     { title: "Emily Wilde's Encyclopaedia of Faeries", author: "Heather Fawcett", desc: "A dryly witty scholar ventures into a snowy village to study the hidden folk and navigate a charming academic rivalry.", color: "text-pink-500", cover: "bg-pink-100", imageUrl: "assets/6.jpg", goodreadsUrl: "https://www.goodreads.com/book/show/60657589-emily-wilde-s-encyclopaedia-of-faeries" },
-    { title: "Tress of the Emerald Sea", author: "Brandon Sanderson", desc: "A whimsical, fairy-tale adventure on a sea of deadly spores, following a girl determined to rescue her true love.", color: "text-blue-500", cover: "bg-blue-100", imageUrl: "assets/7.png", goodreadsUrl: "https://www.goodreads.com/book/show/60531406-tress-of-the-emerald-sea" },
+    { title: "Tress of the Emerald Sea", author: "Brandon Sanderson", desc: "A whimsical, fairy-tale adventure on a sea of deadly spores, following a girl determined to rescue her true love.", color: "text-blue-500", cover: "bg-blue-100", imageUrl: "assets/7.jpg", spotifyUrl: "https://www.goodreads.com/book/show/60531406-tress-of-the-emerald-sea" },
     { title: "Belladonna", author: "Adalyn Grace", desc: "A gothic mystery where a girl who can't die must team up with Death himself to solve a high-stakes poisoning.", color: "text-purple-500", cover: "bg-purple-100", imageUrl: "assets/8.jpg", goodreadsUrl: "https://www.goodreads.com/book/show/58505881-belladonna" },
     { title: "A Wizard's Guide to Defensive Baking", author: "T. Kingfisher", desc: "A 14-year-old with minor magic (useful only for bread) finds herself the unlikely protector of her besieged city.", color: "text-indigo-500", cover: "bg-indigo-100", imageUrl: "assets/9.jpg", goodreadsUrl: "https://www.goodreads.com/book/show/54339351-a-wizard-s-guide-to-defensive-baking" },
     { title: "The Lies of Locke Lamora", author: "Scott Lynch", desc: "Master con artists navigate a Venice-inspired city of canals, high-stakes heists, and ancient deadly secrets.", color: "text-rose-500", cover: "bg-rose-100", imageUrl: "assets/10.jpg", goodreadsUrl: "https://www.goodreads.com/book/show/127455.The_Lies_of_Locke_Lamora" },
@@ -161,8 +169,8 @@ const App = () => {
   ], []);
 
   useEffect(() => {
-    const musicTimer = setInterval(() => setSongIdx((p) => (p === songs.length - 1 ? 0 : p + 1)), 5000);
-    const bookTimer = setInterval(() => setBookIdx((p) => (p === books.length - 1 ? 0 : p + 1)), 5000);
+    const musicTimer = setInterval(() => setSongIdx((p) => (p === songs.length - 1 ? 0 : p + 1)), 3000);
+    const bookTimer = setInterval(() => setBookIdx((p) => (p === books.length - 1 ? 0 : p + 1)), 3000);
     return () => { clearInterval(musicTimer); clearInterval(bookTimer); };
   }, [songs.length, books.length]);
 
@@ -230,16 +238,16 @@ const App = () => {
 
   const getCakeMessage = useCallback(() => {
     switch (cakeStage) {
-      case 0: return "Make a wish and blow out the candles. \n (tap the cake)";
+      case 0: return "Make a wish and blow out the candles.";
       case 1: return "Wait, the flames are stubborn! Try again! 🌬️";
       case 2: return "Nearly there... give it all you've got! 😤";
-      case 3: return "A wish made in sweetness. Happy Birthday Sanju! ✨";
+      case 3: return "A wish made in sweetness. Happy Birthday. ✨";
       default: return "";
     }
   }, [cakeStage]);
 
   return (
-    <div className={`h-[100dvh] overflow-y-scroll snap-y snap-mandatory scroll-smooth ${SITE_CONFIG.themeBg} font-serif text-slate-700 selection:bg-pink-100 selection:text-pink-600 overflow-x-hidden`}>
+    <div className={`h-svh overflow-y-scroll snap-y snap-mandatory scroll-smooth ${SITE_CONFIG.themeBg} font-serif text-slate-700 selection:bg-pink-100 selection:text-pink-600 overflow-x-hidden`}>
       <div className="fixed inset-0 pointer-events-none overflow-hidden opacity-50 md:opacity-70">
         {particles.map((p) => {
           const P_Icon = p.type === 0 ? Heart : p.type === 1 ? Star : Sparkles;
@@ -252,7 +260,7 @@ const App = () => {
       </div>
 
       {/* 0: HERO */}
-      <header ref={el => sectionRefs.current[0] = el} className="relative h-[100dvh] flex flex-col items-center justify-center text-center px-4 md:px-6 gap-2 md:gap-10 snap-start snap-always animate-reveal overflow-hidden">
+      <header ref={el => sectionRefs.current[0] = el} className="relative h-svh flex flex-col items-center justify-center text-center px-4 md:px-6 gap-2 md:gap-10 snap-start snap-always animate-reveal overflow-hidden">
         <SectionSprite Icon={Heart} colorClass="text-pink-400" side="left" />
         <CharacterSprite side="right" imageUrl={CHARACTER_LIST[0].url} tiltClass={CHARACTER_LIST[0].tilt} />
         <div className={`flex gap-2 transition-all duration-1000 ${activeSection === 0 ? "opacity-100" : "opacity-0 translate-y-4"}`}>
@@ -279,13 +287,13 @@ const App = () => {
       </header>
 
       {/* 1: NOTE */}
-      <section ref={el => sectionRefs.current[1] = el} className="relative h-[100dvh] flex flex-col items-center justify-center text-center px-4 md:px-8 snap-start snap-always overflow-hidden">
+      <section ref={el => sectionRefs.current[1] = el} className="relative h-svh flex flex-col items-center justify-center text-center px-4 md:px-8 snap-start snap-always overflow-hidden">
         <SectionSprite Icon={Sparkles} colorClass="text-purple-400" side="right" />
         <CharacterSprite side="left" imageUrl={CHARACTER_LIST[1].url} tiltClass={CHARACTER_LIST[1].tilt} />
         <NavButton direction="up" targetIndex={0} label="Home" scrollTo={scrollTo} />
         <div className={`max-w-2xl w-full flex flex-col gap-2 md:gap-6 transition-all duration-1000 ${activeSection === 1 ? "opacity-100" : "opacity-0 translate-y-4"}`}>
           <PenTool className="text-pink-400 w-8 h-8 md:w-12 md:h-12 mx-auto" />
-          <div className={`${SITE_CONFIG.cardBg} px-4 md:px-14 py-5 md:py-10 rounded-[2.5rem] md:rounded-[3rem] shadow-xl text-left min-h-[280px] md:min-h-[400px] flex flex-col justify-center`}>
+          <div className={`${SITE_CONFIG.cardBg} px-4 md:px-14 py-5 md:py-10 rounded-[1.5rem] md:rounded-[3rem] shadow-xl text-left min-h-[320px] md:min-h-[400px] flex flex-col justify-center`}>
             <p className="text-[13px] md:text-xl text-slate-700 leading-relaxed italic">
               <span className="block mb-2 md:mb-4 text-pink-500 font-bold text-lg md:text-2xl">Dear Sanjanaa,</span>
               I'll be honest with you: I gave this a lot of thought. From niche LEGO<sup className="text-[0.6em] ml-0.5">®</sup> sets to Capricorn-themed earrings, every idea met the daunting challenges of logistics, hidden addresses, and the simple reality of <span className="font-bold text-slate-900">6,300 kilometers.</span> So, what better replacement for something tangible than something intangible?
@@ -300,7 +308,7 @@ const App = () => {
       </section>
 
       {/* 2: BEATS */}
-      <section ref={el => sectionRefs.current[2] = el} className="relative h-[100dvh] flex flex-col items-center justify-center text-center px-4 md:px-8 snap-start snap-always overflow-hidden">
+      <section ref={el => sectionRefs.current[2] = el} className="relative h-svh flex flex-col items-center justify-center text-center px-4 md:px-8 snap-start snap-always overflow-hidden">
         <SectionSprite Icon={Music} colorClass="text-blue-400" side="left" />
         <NavButton direction="up" targetIndex={1} label="Back" scrollTo={scrollTo} />
         <div className={`max-w-2xl w-full flex flex-col gap-2 md:gap-4 transition-all duration-1000 ${activeSection === 2 ? "scale-100 opacity-100" : "scale-95 opacity-0"}`}>
@@ -309,25 +317,24 @@ const App = () => {
             <span className="text-[9px] md:text-xs uppercase tracking-[0.4em] font-bold text-blue-500 bg-blue-50/50 px-3 md:px-4 py-1.5 rounded-full border border-blue-100 shadow-sm">Birthday Beats</span>
           </div>
           <div className={`${SITE_CONFIG.cardBg} px-4 md:px-6 py-2 md:py-4 rounded-xl md:rounded-2xl shadow-sm max-w-lg mx-auto`}>
-            <p className="text-[10px] md:text-base text-slate-800 italic leading-relaxed text-center">
+            <p className="text-[11px] md:text-base text-slate-800 italic leading-relaxed text-center">
               While you may not know it, your taste in music is incredibly diverse and wide ranging. This curated selection might not match the sheer scale of your grandiose, but I hope these tracks light up your week!
             </p>
           </div>
           <div className="relative group px-1">
             <button onClick={() => handlePrev(songIdx, setSongIdx, songs.length)} className="absolute -left-6 md:-left-16 top-1/2 -translate-y-1/2 p-2 text-slate-900 hover:text-blue-400 z-20 touch-manipulation"><ChevronLeft size={28} className="md:w-[50px] md:h-[50px]" /></button>
-            <div className={`${SITE_CONFIG.cardBg} rounded-[1rem] md:rounded-[2.5rem] shadow-xl min-h-[160px] md:min-h-[320px] flex flex-col overflow-hidden m-1 md:m-6`}>
+            <div className={`${SITE_CONFIG.cardBg} rounded-[1rem] md:rounded-[2.5rem] shadow-xl min-h-[180px] md:min-h-[320px] flex flex-col overflow-hidden m-1 md:m-6`}>
               <div className="flex flex-1 transition-transform duration-700 ease-in-out h-full items-center" style={{ transform: `translateX(-${songIdx * 100}%)` }}>
                 {songs.map((s, i) => (
                   <div key={i} className="min-w-full p-3 md:p-12 flex flex-col sm:flex-row items-center gap-2 md:gap-10">
-                    <div className={`w-16 h-16 md:w-44 md:h-44 ${s.cover} rounded-lg md:rounded-[1.5rem] shadow flex-shrink-0 flex items-center justify-center text-blue-400/60 shadow-inner`}><img src={s.imageUrl} className="rounded-lg md:rounded-[1.5rem] shadow object-cover h-full w-full" alt={s.title} /></div>
+                    <div className={`w-20 h-20 md:w-44 md:h-44 ${s.cover} rounded-lg md:rounded-[1.5rem] shadow flex-shrink-0 flex items-center justify-center text-blue-400/60 shadow-inner`}><img src={s.imageUrl} className="rounded-lg md:rounded-[1.5rem] shadow object-cover h-full w-full" alt={s.title} /></div>
                     <div className="flex-1 text-center sm:text-left overflow-hidden">
                       <p className={`text-xs md:text-xl font-bold uppercase ${s.color} leading-tight whitespace-normal`}>{s.title}</p>
-                      <p className={`text-[8px] md:text-sm font-bold mt-0.5 ${s.color} brightness-75`}>Selection {i+1}</p>
-                      <p className="text-[8px] md:text-sm text-slate-800 italic font-normal mt-1 md:mt-2 leading-tight md:leading-relaxed whitespace-normal line-clamp-2 md:line-clamp-none">{s.artist}</p>
-                      <div className="mt-1 md:mt-3">
-                        <a href={s.spotifyUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-[#1DB954] hover:text-[#1ed760] transition-colors">
+                      <p className="text-[9px] md:text-sm text-slate-800 italic font-normal mt-1 md:mt-2 leading-tight md:leading-relaxed whitespace-normal line-clamp-2 md:line-clamp-none">{s.artist}</p>
+                      <div className="mt-2 md:mt-3">
+                        <a href={s.spotifyUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[#1DB954] hover:text-[#1ed760] transition-colors">
                           <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.49 17.31c-.21.34-.65.45-.99.24-2.81-1.72-6.35-2.11-10.51-1.16-.38.09-.76-.14-.85-.53-.09-.38.14-.76.53-.85 4.54-1.04 8.46-.59 11.58 1.32.34.21.45.65.24.98zm1.46-3.26c-.26.43-.82.57-1.25.3-3.22-1.98-8.12-2.55-11.93-1.4-.48.15-1-.13-1.15-.61-.15-.48.13-1 .61-1.15 4.36-1.32 9.77-.67 13.43 1.58.42.26.56.81.3 1.25zm.13-3.41c-3.86-2.29-10.24-2.51-13.93-1.39-.59.18-1.23-.15-1.41-.74-.18-.59.15-1.23.74-1.41 4.25-1.29 11.29-1.04 15.71 1.58.53.31.7.99.39 1.52-.31.53-.99.7-1.5 0z"/></svg>
-                          <span className="text-[7px] md:text-[9px] uppercase tracking-widest font-bold">Listen</span>
+                          <span className="text-[8px] uppercase tracking-widest font-bold">Listen</span>
                         </a>
                       </div>
                     </div>
@@ -335,14 +342,14 @@ const App = () => {
                 ))}
               </div>
             </div>
-            <button onClick={() => handleNext(songIdx, setSongIdx, songs.length)} className="absolute -right-6 md:-right-16 top-1/2 -translate-y-1/2 p-2 text-slate-900 hover:text-blue-400 z-20"><ChevronRight size={24} className="md:w-[50px] md:h-[50px]" /></button>
+            <button onClick={() => handleNext(songIdx, setSongIdx, songs.length)} className="absolute -right-6 md:-right-16 top-1/2 -translate-y-1/2 p-2 text-slate-900 hover:text-blue-400 z-20 touch-manipulation"><ChevronRight size={28} className="md:w-[50px] md:h-[50px]" /></button>
           </div>
         </div>
         <NavButton direction="down" targetIndex={3} label="Curated Shelf" scrollTo={scrollTo} />
       </section>
 
       {/* 3: SHELF */}
-      <section ref={el => sectionRefs.current[3] = el} className="relative h-svh flex flex-col items-center justify-center text-center px-4 md:px-8 snap-start snap-always overflow-hidden">
+      <section ref={el => sectionRefs.current[3] = el} className="relative h-[100dvh] flex flex-col items-center justify-center text-center px-4 md:px-8 snap-start snap-always overflow-hidden">
         <SectionSprite Icon={BookOpen} colorClass="text-purple-400" side="right" />
         <NavButton direction="up" targetIndex={2} label="Back" scrollTo={scrollTo} />
         <div className={`max-w-4xl w-full flex flex-col gap-2 md:gap-4 transition-all duration-1000 ${activeSection === 3 ? "scale-100 opacity-100" : "scale-95 opacity-0"}`}>
@@ -350,28 +357,28 @@ const App = () => {
             <BookOpen className="text-purple-400 w-5 h-5 md:w-8 md:h-8" />
             <span className="text-[9px] md:text-xs uppercase tracking-[0.4em] font-bold text-purple-500 bg-purple-50/50 px-3 md:px-4 py-1.5 rounded-full border border-purple-100 shadow-sm">Curated Shelf</span>
           </div>
-          <div className={`${SITE_CONFIG.cardBg} px-4 md:px-6 py-2 md:py-4 rounded-xl md:rounded-2xl shadow-sm max-w-xl mx-auto`}>
+          <div className={`${SITE_CONFIG.cardBg} px-4 md:px-6 py-2 md:py-4 rounded-xl md:rounded-2xl shadow-sm max-w-xl mx-auto text-left`}>
             <p className="text-[10px] md:text-base text-slate-800 italic leading-relaxed text-center">
               Your love for books (and fantasy) knows no bounds. So taking into account every nuance of your "exquisite" palette, please peruse this collection that I hope will accompany you throughout 2026.
             </p>
           </div>
           <div className="relative group px-1">
-            <button onClick={() => handlePrev(bookIdx, setBookIdx, books.length)} className="absolute -left-6 md:-left-16 top-1/2 -translate-y-1/2 p-2 text-slate-900 hover:text-purple-400 z-10"><ChevronLeft size={24} className="md:w-[50px] md:h-[50px]" /></button>
-            <div className={`${SITE_CONFIG.cardBg} rounded-[1rem] md:rounded-[2.5rem] shadow-xl min-h-[240px] md:min-h-[380px] flex flex-col overflow-hidden m-1 md:m-6`}>
+            <button onClick={() => handlePrev(bookIdx, setBookIdx, books.length)} className="absolute -left-6 md:-left-16 top-1/2 -translate-y-1/2 p-2 text-slate-900 hover:text-purple-400 z-10"><ChevronLeft size={28} className="md:w-[50px] md:h-[50px]" /></button>
+            <div className={`${SITE_CONFIG.cardBg} rounded-[1.2rem] md:rounded-[2.5rem] shadow-xl min-h-[260px] md:min-h-[380px] flex flex-col overflow-hidden m-2 md:m-6`}>
               <div className="flex flex-1 transition-transform duration-700 ease-in-out h-full items-center" style={{ transform: `translateX(-${bookIdx * 100}%)` }}>
                 {books.map((b, i) => (
                   <div key={i} className="min-w-full p-4 md:p-8 flex flex-col md:flex-row items-center gap-3 md:gap-10 text-left h-full">
-                    <div className="w-20 h-28 md:w-48 md:h-64 flex-shrink-0 flex items-center justify-center rounded-lg md:rounded-xl overflow-hidden shadow-lg bg-black/5">
+                    <div className="w-20 h-32 md:w-48 md:h-64 flex-shrink-0 flex items-center justify-center rounded-lg md:rounded-xl overflow-hidden shadow-lg bg-black/5">
                       <img src={b.imageUrl} className="h-full w-full object-contain" alt={b.title} />
                     </div>
                     <div className="flex-1 text-center md:text-left">
                       <h4 className={`font-bold text-sm md:text-2xl uppercase ${b.color} leading-tight whitespace-normal`}>{b.title}</h4>
-                      <p className={`text-[9px] md:text-sm font-bold mt-0.5 md:mb-2 ${b.color} brightness-75`}>{b.author}</p>
+                      <p className={`text-[10px] md:text-sm font-bold mt-0.5 md:mb-2 ${b.color} brightness-75`}>{b.author}</p>
                       <p className="text-[10px] md:text-base text-slate-800 italic font-normal leading-tight md:leading-relaxed whitespace-normal line-clamp-3 md:line-clamp-none">{b.desc}</p>
-                      <div className="mt-2 md:mt-4">
+                      <div className="mt-3 md:mt-4">
                         <a href={b.goodreadsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[#372213] hover:text-pink-600 transition-colors">
-                          <ExternalLink size={12} className="md:w-4 md:h-4" />
-                          <span className="text-[8px] md:text-[10px] uppercase tracking-widest font-bold">Read More</span>
+                          <ExternalLink size={14} className="md:w-4 md:h-4" />
+                          <span className="text-[9px] md:text-[10px] uppercase tracking-widest font-bold">Read More</span>
                         </a>
                       </div>
                     </div>
@@ -379,20 +386,20 @@ const App = () => {
                 ))}
               </div>
             </div>
-            <button onClick={() => handleNext(bookIdx, setBookIdx, books.length)} className="absolute -right-6 md:-right-16 top-1/2 -translate-y-1/2 p-2 text-slate-900 hover:text-purple-400 z-10"><ChevronRight size={24} className="md:w-[50px] md:h-[50px]" /></button>
+            <button onClick={() => handleNext(bookIdx, setBookIdx, books.length)} className="absolute -right-6 md:-right-16 top-1/2 -translate-y-1/2 p-2 text-slate-900 hover:text-purple-400 z-10"><ChevronRight size={32} className="md:w-[50px] md:h-[50px]" /></button>
           </div>
         </div>
         <NavButton direction="down" targetIndex={4} label="A Circle of Love" scrollTo={scrollTo} />
       </section>
 
       {/* 4: VOICES */}
-      <section ref={el => sectionRefs.current[4] = el} className="relative h-svh flex flex-col items-center justify-center text-center px-4 md:px-8 snap-start snap-always overflow-hidden">
+      <section ref={el => sectionRefs.current[4] = el} className="relative h-[100dvh] flex flex-col items-center justify-center text-center px-4 md:px-8 snap-start snap-always overflow-hidden">
         <SectionSprite Icon={Users} colorClass="text-pink-400" delay="2s" side="left" />
         <NavButton direction="up" targetIndex={3} label="Back" scrollTo={scrollTo} />
         <div className={`max-w-lg w-full flex flex-col gap-3 md:gap-4 transition-all duration-1000 ${activeSection === 4 ? "opacity-100" : "opacity-0"}`}>
           <MessageSquare className="text-pink-400 mx-auto w-8 h-8 md:w-12 md:h-12" />
-          <div className={`${SITE_CONFIG.cardBg} px-4 md:px-12 py-5 md:py-8 rounded-[1.5rem] md:rounded-[2.5rem] shadow-xl text-center min-h-[160px] md:min-h-[220px] flex flex-col justify-center`}>
-            <p className="text-[13px] md:text-xl text-slate-700 leading-relaxed italic px-2 md:px-4">
+          <div className={`${SITE_CONFIG.cardBg} px-4 md:px-12 py-5 md:py-8 rounded-[1.5rem] md:rounded-[2.5rem] shadow-xl text-center min-h-[180px] md:min-h-[220px] flex flex-col justify-center`}>
+            <p className="text-sm md:text-xl text-slate-700 leading-relaxed italic px-2 md:px-4">
               Over the years and across so many parts of the world, you have gathered so many friends from all walks of life - each of us so lucky to know you. 
               <br /><br />
               Today, as we all join hands to celebrate 23 incredibly <span className="text-pink-500 font-bold">sanj-astic</span> years, we would all like to collectively thank you for the pocket-sized yet dynamic impact you've had on every one of us. 
@@ -405,14 +412,14 @@ const App = () => {
       </section>
 
       {/* 5: WISHES */}
-      <section ref={el => sectionRefs.current[5] = el} className="relative h-svh flex flex-col items-center justify-center text-center px-4 md:px-8 snap-start snap-always overflow-hidden">
+      <section ref={el => sectionRefs.current[5] = el} className="relative h-[100dvh] flex flex-col items-center justify-center text-center px-4 md:px-8 snap-start snap-always overflow-hidden">
         <SectionSprite Icon={Flower} colorClass="text-purple-400" delay="2.5s" side="right" />
         <CharacterSprite side="left" imageUrl={CHARACTER_LIST[5].url} tiltClass={CHARACTER_LIST[5].tilt} />
         <NavButton direction="up" targetIndex={4} label="Back" scrollTo={scrollTo} />
         <div className={`max-w-xl w-full flex flex-col gap-2 md:gap-4 transition-all duration-1000 ${activeSection === 5 ? "opacity-100" : "opacity-0"}`}>
-          <div className="flex items-center justify-center gap-2">
-            <Quote className="text-pink-400 w-5 h-5 md:w-8 md:h-8" />
-            <span className="text-[9px] md:text-xs uppercase tracking-[0.4em] font-bold text-pink-500 bg-pink-50/50 px-3 md:px-4 py-1.5 rounded-full border border-pink-100 shadow-sm">Love & Wishes</span>
+          <div className="flex items-center justify-center gap-3">
+            <Quote className="text-pink-400 w-6 h-6 md:w-8 md:h-8" />
+            <span className="text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold text-pink-500 bg-pink-50/50 px-4 py-1.5 rounded-full border border-pink-100 shadow-sm">Love & Wishes</span>
           </div>
 
           <div className="relative group px-1">
@@ -440,7 +447,7 @@ const App = () => {
                       </div>
                     ) : (
                       <div className="py-2 px-1 text-center">
-                        <p className={`italic ${i === 6 ? "text-base md:text-2xl font-bold text-pink-500" : "text-[10px] sm:text-[13px] md:text-lg text-slate-900"} leading-snug md:leading-relaxed whitespace-pre-wrap`}>
+                        <p className={`italic ${i === 8 ? "text-base md:text-2xl font-bold text-pink-500" : "text-[10px] sm:text-[13px] md:text-lg text-slate-900"} leading-snug md:leading-relaxed whitespace-pre-wrap`}>
                           "{w.text}"
                         </p>
                         <p className="mt-1 md:mt-4 text-[8px] md:text-xs font-bold text-pink-600 uppercase tracking-[0.4em]">{w.author}</p>
@@ -463,14 +470,14 @@ const App = () => {
         <NavButton direction="up" targetIndex={5} label="Back" scrollTo={scrollTo} />
         <div className={`max-w-md w-full flex flex-col gap-2 md:gap-4 transition-all duration-1000 ${activeSection === 6 ? "opacity-100" : "opacity-0"}`}>
           <PenTool className="text-purple-400 w-8 h-8 md:w-12 md:h-12 mx-auto" />
-          <div className={`${SITE_CONFIG.cardBg} px-5 md:px-10 py-5 md:py-10 rounded-[1.5rem] md:rounded-[2.5rem] shadow-xl text-left min-h-[260px] md:min-h-[300px] flex flex-col justify-center`}>
-            <p className="text-[10px] md:text-[15px] text-slate-700 leading-tight md:leading-relaxed font-normal italic text-center">
+          <div className={`${SITE_CONFIG.cardBg} px-6 md:px-10 py-6 md:py-10 rounded-[2rem] md:rounded-[2.5rem] shadow-xl text-left min-h-[300px] flex flex-col justify-center`}>
+            <p className="text-[12px] md:text-[15px] text-slate-700 leading-relaxed font-normal italic">
               Sanjanaa, I hardly ever find it difficult to put a word or two together, yet at this crucial juncture, all my divine powers of yap seem to have flown out the window.
-              <br /><br className="hidden sm:block" />
-              Anyway - last but certainly not least (and as much as I know you hate the word) - I am so incredibly thankful for your presence in my life. Never once in these jagged few years did I imagine I'd run into such a <span className="font-bold text-slate-900"> perfect concoction of joy, infectious energy, laughter, and warmth </span> - someone who makes me want to strive to be a better person everyday.
-              <br /><br className="hidden sm:block" />
-              I am so proud of the growth I've seen in you over the past few years, and I'm even more excited to see where life takes you next. I know it will be something spectacular, because an amazing person like you deserves nothing less. I'm forever grateful to the universe to call you my <span className="font-bold text-slate-900"> NYT partner-in-crime </span>, my go-to for guidance, my personal "sit-down" comedian, and most importantly, my dearest friend.
-              <br /><br className="hidden sm:block" />A very <span className="font-bold text-slate-900">happy birthday</span> to you, Sanju. Thank you for everything you do for us, and I hope to see you soon.
+              <br /><br />
+              Anyway - last but certainly not least (and as much as I know you hate the word) - I am so incredibly thankful for your presence in my life. Never once in these jagged few years did I imagine I'd run into such a perfect concoction of joy, infectious energy, laughter, and warmth.
+              <br /><br />
+              I am so proud of the growth I've seen in you over the past few years, and I'm even more excited to see where life takes you next. I know it will be something spectacular, because an amazing person like you deserves nothing less. I'm forever grateful to the universe to call you my NYT partner-in-crime, my go-to for guidance, my personal "sit-down" comedian, and most importantly, my dearest friend.
+              <br /><br />A very <span className="font-bold text-slate-900">happy birthday</span> to you, Sanju. Thank you for everything you do for us, and I hope to see you soon.
             </p>
           </div>
         </div>
@@ -491,22 +498,22 @@ const App = () => {
               🎂
               {cakeStage === 3 && (
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  {[...Array(40)].map((_, i) => (
-                    <div key={i} className="absolute w-1.5 h-1.5 rounded-sm animate-confetti-pop" style={{ backgroundColor: ["#f472b6", "#3b82f6", "#a855f7", "#fbbf24", "#10b981"][i % 5], "--tx": `${Math.cos((i / 40) * Math.PI * 2) * (100 + Math.random() * 200)}px`, "--ty": `${Math.sin((i / 40) * Math.PI * 2) * (100 + Math.random() * 200)}px`, "--rot": `${Math.random() * 720}deg`, animationDelay: `${Math.random() * 0.2}s` }} />
+                  {[...Array(60)].map((_, i) => (
+                    <div key={i} className="absolute w-2 h-2 rounded-sm animate-confetti-pop" style={{ backgroundColor: ["#f472b6", "#3b82f6", "#a855f7", "#fbbf24", "#10b981"][i % 5], "--tx": `${Math.cos((i / 60) * Math.PI * 2) * (150 + Math.random() * 250)}px`, "--ty": `${Math.sin((i / 60) * Math.PI * 2) * (150 + Math.random() * 250)}px`, "--rot": `${Math.random() * 720}deg`, animationDelay: `${Math.random() * 0.2}s` }} />
                   ))}
                   <div className="text-pink-500 animate-ping opacity-80">
-                    <Sparkles size={60} />
+                    <Sparkles size={80} />
                   </div>
                 </div>
               )}
             </div>
           </div>
-          <div className={`${SITE_CONFIG.cardBg} px-4 md:px-14 py-2.5 md:py-8 rounded-full shadow-2xl transition-all ${cakeStage === 3 ? "scale-110 border-pink-400" : "animate-bounce-gentle"}`}>
-            <p className="text-pink-500 font-bold italic text-xs md:text-xl">{getCakeMessage()}</p>
-            {cakeStage === 3 && <button onClick={resetCake} className="ml-2 p-1 text-pink-400 hover:text-pink-600 hover:rotate-[-90deg] transition-all duration-300 inline-flex align-middle"><RotateCcw size={16} /></button>}
+          <div className={`${SITE_CONFIG.cardBg} px-6 md:px-14 py-4 md:py-8 rounded-full shadow-2xl transition-all ${cakeStage === 3 ? "scale-110 border-pink-400" : "animate-bounce-gentle"}`}>
+            <p className="text-pink-500 font-bold italic text-sm md:text-xl">{getCakeMessage()}</p>
+            {cakeStage === 3 && <button onClick={resetCake} className="ml-4 p-1 text-pink-400 hover:text-pink-600 hover:rotate-[-90deg] transition-all duration-300 inline-flex align-middle"><RotateCcw size={20} /></button>}
           </div>
         </div>
-        <footer className="absolute bottom-4 py-2 opacity-60 text-[8px] md:text-md uppercase tracking-[0.4em] font-bold text-slate-800">
+        <footer className="absolute bottom-4 py-2 opacity-60 text-[10px] md:text-md uppercase tracking-[0.4em] font-bold text-slate-800">
           made with ❤️ by indru · 13/01/2026
         </footer>
       </section>
