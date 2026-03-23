@@ -1,1 +1,1 @@
-# Fun little frontend refresher project.
+Fun little frontend refresher project.
